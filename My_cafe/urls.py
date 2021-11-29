@@ -27,10 +27,12 @@ urlpatterns = [
     path('services/', include('services.urls')),
     #PATH blog
     path('blog/', include('blog.urls')),
+    #PATH pages
+    path('pages/', include('pages.urls')),
 ]
 
 if settings.DEBUG:
     from django.conf.urls.static import static
-    urlpatterns += static(settings.MEDIA_URL, documen_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
     
